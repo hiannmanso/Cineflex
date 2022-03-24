@@ -5,6 +5,8 @@ export default function Footer({url,name}){
         <footer className='footer'>
             <img src ={url} alt={name}/>
             <h1>{name}</h1>
+
+            <></>
         </footer>
     )
 }
