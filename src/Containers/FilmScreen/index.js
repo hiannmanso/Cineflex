@@ -4,8 +4,8 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
 export default function FilmScreen() {
-    const [infoFilm, setInfoFilm] = useState({})
-    const id = 1
+    const [infoFilm, setInfoFilm] = useState([])
+    const {id} = useParams()
 
     useEffect(() => {
         axios({
@@ -19,12 +19,27 @@ export default function FilmScreen() {
     return (
         <>
             <div className='containerSelect'>
-                <h1>Selecione o(s) assento(s)</h1>
+                <h1>Selecione o horário</h1>
             </div>
             <div className='film'>
-                                <div className='dataFilm'>
-                                    <p>teste</p>
-                                </div>
+                {infoFilm ? infoFilm.map((item,index)=>{
+                    return(
+                        <div className='dataFilm' key={index}>
+                            <h1>{item.weekday} {item.date}</h1>
+                            <div className='filmHours'>
+                                {item.showtimes.map((item)=>{
+                                    return(
+                                        <button className='btnHr' key={item.id}><span className='textBtn'>{item.name}</span></button>
+
+                                    )
+                                })}
+
+                            </div>
+                           
+                        </div>
+
+                    )
+                }):<h1>loading</h1>}
             </div>
 
 

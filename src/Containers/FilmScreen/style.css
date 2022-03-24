@@ -25,3 +25,49 @@
 .film{
     margin-top: 169px;
 }
+
+.dataFilm{
+    width: auto;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    margin-left: 24px;
+    letter-spacing: 0.02em;
+    margin-bottom: 88px;
+    color: #293845;
+}
+.dataFilm h1{
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: row;
+}
+.filmHours button{
+    background: #E8833A;
+    border-radius: 3px;
+    width: 83px;
+    height: 43px;
+    border: none;
+    margin-right: 8px;
+
+}
+.textBtn{
+    display:flex;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    color: #FFFFFF;
+}

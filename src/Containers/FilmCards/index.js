@@ -1,7 +1,7 @@
 import './style.css'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-
+import {Link} from 'react-router-dom'
 
 export default function FilmCards() {
     const [movies, setMovies] = useState([]);
@@ -23,10 +23,13 @@ export default function FilmCards() {
             <div className='containerSelect'>
                 <h1>Selecione o filme</h1>
             </div>
+            
             <div className='cardsFilm'>
                 {movies.map(item => {
                     return (
-                        <CardFilm key={item.id} img={item.posterURL} title={item.title} />
+                        <Link to={`/session/${item.id}`}>
+                            <CardFilm key={item.id} img={item.posterURL} title={item.title} />
+                        </Link>
                     )
                 })}
             </div>
