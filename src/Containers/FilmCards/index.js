@@ -3,7 +3,6 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
 
-
 export default function FilmCards() {
     const [movies, setMovies] = useState([]);
 
@@ -30,7 +29,6 @@ export default function FilmCards() {
                     return (
                         <Link to={`/session/${item.id}`}>
                             <CardFilm key={item.id} img={item.posterURL} title={item.title} />
-                            <Footer url={item.posterURL} name={title}/>
                         </Link>
                     )
                 })}

@@ -2,9 +2,11 @@ import './style.css'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
+import Footer from './../Footer'
 
 export default function FilmScreen() {
     const [infoFilm, setInfoFilm] = useState([])
+    const [infoFooter,setInfoFooter] = useState([])
     const {id} = useParams()
 
     useEffect(() => {
@@ -13,7 +15,8 @@ export default function FilmScreen() {
             url: `https://mock-api.driven.com.br/api/v5/cineflex/movies/${id}/showtimes`
         }).then(response => {
             setInfoFilm(response.data.days)
-            console.log(response.data.days)
+            console.log(response.data)
+            setInfoFooter(response.data)
         })
     }, [])
     return (
@@ -40,7 +43,9 @@ export default function FilmScreen() {
 
                     )
                 }):<h1>loading</h1>}
+                
             </div>
+            <Footer url={infoFooter.posterURL} name={infoFooter.title}/>
 
 
         </>
