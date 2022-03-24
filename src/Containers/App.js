@@ -12,7 +12,7 @@ export default function App(){
                 <Route path='/' element={<FilmCards/>}/>
                 <Route path='/session/:id' element={<FilmScreen/>}/>
             </Routes>
-            <Footer/>
+            
         </BrowserRouter>
     )
 } 
