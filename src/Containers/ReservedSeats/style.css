@@ -1,0 +1,46 @@
+.sucessContainer{
+    width: 100vw;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 67px;
+    z-index: -1;
+    
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    color: #247A6B;
+
+
+}
+.film,.info,.infoseats{
+
+    margin-left: 29px;
+
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.film h1,.info h1,.infoseats h1{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+    margin-left: 29px;
+
+}

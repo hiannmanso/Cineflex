@@ -1,0 +1,98 @@
+.seats{
+   
+    display: flex;
+    flex-wrap: wrap;
+    margin:169px 24px 0;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.seat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #808F9D;
+    box-sizing: border-box;
+    border-radius: 12px;
+    width: 26px;
+    height: 26px;
+    margin-right: 7px;
+    margin-bottom: 18px;
+    
+}
+.inputName label, .inputCpf label{
+    margin-left: 24px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    flex-direction: column;
+
+    color: #293845;
+}
+
+.inputInfo{
+    margin:0 24px 0;
+    width:calc(100vw - 38px);
+    height: 51px;
+    background: #FFFFFF;
+    border: 1px solid #D5D5D5;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+.infosUsers{
+    display: flex;
+    flex-direction: column;
+}
+.true{
+    background: #C3CFD9;
+}
+.false{
+    background:#FBE192;
+    pointer-events:none;
+}
+.green{
+    background:#8DD7CF;
+}
+.legendsSeates{
+    margin-top: 16px;
+    margin-bottom: 41px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    
+    justify-content:space-evenly
+}
+.lng{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.btnFinal{
+    width: 225px;
+    border: none;
+    height: 42px;
+    background: #E8833A;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 57px auto 0;
+}
+.btnFinal span{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    color: #FFFFFF;
+}

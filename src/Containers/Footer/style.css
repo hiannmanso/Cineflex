@@ -28,6 +28,14 @@
     width: 48px;
     height: 72px;
 }
+.title{
+    display: flex;
+    flex-direction: column;
+   
+}
+.inputName{
+    margin-bottom: 7px;
+}
 .footerContent h1{
     margin-left: 14px;
     font-family: 'Roboto';
@@ -35,8 +43,8 @@
     font-weight: 400;
     font-size: 26px;
     line-height: 30px;
-    display: flex;
     align-items: center;
+    justify-content: center;
 
     color: #293845;
 

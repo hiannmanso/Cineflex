@@ -25,9 +25,9 @@ export default function FilmCards() {
             </div>
             
             <div className='cardsFilm'>
-                {movies.map(item => {
+                {movies.map((item) => {
                     return (
-                        <Link to={`/session/${item.id}`}>
+                        <Link to={`/film/${item.id}`}>
                             <CardFilm key={item.id} img={item.posterURL} title={item.title} />
                         </Link>
                     )

@@ -1,8 +1,10 @@
+import {BrowserRouter,Route,Routes} from 'react-router-dom'
+
 import Header from "./Header"
 import FilmCards from './FilmCards'
 import FilmScreen from './FilmScreen'
-import Footer from './Footer'
-import {BrowserRouter,Route,Routes} from 'react-router-dom'
+import SessionFilm from './SessionFilm'
+import ReservedSeats from './ReservedSeats'
 
 export default function App(){
     return(
@@ -10,10 +12,13 @@ export default function App(){
             <Header/>
             <Routes>
                 <Route path='/' element={<FilmCards/>}/>
-                <Route path='/session/:id' element={<FilmScreen/>}/>
+                <Route path='/film/:id' element={<FilmScreen/>}/>
+                <Route path='/session/:idSession' element={<SessionFilm/>}/>
+                <Route path='/reservedSeats' element={<ReservedSeats/>}/>
             </Routes>
             
         </BrowserRouter>
     )
+    
 } 
 
