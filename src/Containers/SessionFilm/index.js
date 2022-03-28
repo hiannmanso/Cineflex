@@ -4,42 +4,45 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import Footer from './../Footer'
 import Header from '../Header'
-import {toast} from 'react-hot-toast'
+import { toast } from 'react-hot-toast'
 
 export default function SessionFilm() {
     const { idSession } = useParams();
-    const {state} = useLocation();
+    const { state } = useLocation();
 
 
     const [infoSesssion, setInfoSession] = useState([])
     const [infoFooter, setInfoFooter] = useState('')
     const [seatsSelected, setSeatsSelected] = useState([])
-    const [seatName,setSeatName] = useState([])
+    const [seatName, setSeatName] = useState([])
     const [nameUser, setNameUser] = useState('')
     const [cpfUser, setCpfUser] = useState('')
-    let infoSeates = { ids: seatsSelected, name: nameUser, cpf: cpfUser,infoFooter:infoFooter ,seatName:seatName, route:`/session/${idSession}`}
+
+    let infoSeates = { ids: seatsSelected, name: nameUser, cpf: cpfUser, infoFooter: infoFooter, seatName: seatName, route: `/session/${idSession}` }
     let valid = false
-    
+
 
     function selectSeat(response, item) {
 
         if (response.target.parentNode.className == `seat green`) {
             response.target.parentNode.className = `seat true`
-            setSeatName(seatName.filter(response=>{
-                if(response != item.name){
+            setSeatName(seatName.filter(response => {
+                if (response != item.name) {
                     return true
                 }
             }))
-            setSeatsSelected(seatsSelected.filter(response=>{
-                if(response != item.name){
+            setSeatsSelected(seatsSelected.filter(response => {
+                if (response != item.id) {
                     return true
                 }
             }))
-            
-        }if(response.target.parentNode.className == `seat false`){
+
+        } else if (response.target.parentNode.className == `seat false`) {
             alert('Esse assento não está disponível')
-        }else {    
-            setSeatsSelected([...seatsSelected, item.id])   
+        } else {
+            console.log(nameUser)
+
+            setSeatsSelected([...seatsSelected, item.id])
             setSeatName([...seatName, item.name])
             response.target.parentNode.className = `seat green`
 
@@ -47,6 +50,7 @@ export default function SessionFilm() {
     }
 
     function sendInfoSeats() {
+        { }
         axios({
             method: 'post',
             url: 'https://mock-api.driven.com.br/api/v5/cineflex/seats/book-many',
@@ -70,7 +74,7 @@ export default function SessionFilm() {
     }, [])
     return (
         <>
-         <Header back={state}/>
+            <Header back={state} />
             <div className='containerAll'>
                 <div className='containerSeats'>
                     <h1>Selecione o(s) assento(s)</h1>
@@ -101,14 +105,16 @@ export default function SessionFilm() {
                     </div>
                 </div>
                 <div className='infosUsers'>
+
                     <div className='inputName'>
-                        <label>Nome do comprador:</label>
+                        <label>Nome do comprador :</label>
                         <input class='inputInfo' onChange={(e) => { setNameUser(e.target.value) }} type='text' placeholder='Digite seu nome...' />
                     </div>
                     <div className='inputCpf'>
-                        <label>CPF do comprador:</label>
+                        <label>CPF do comprador  :</label>
                         <input class='inputInfo' onChange={(e) => { setCpfUser(e.target.value) }} type='text' placeholder='Digite seu CPF...' />
                     </div>
+
                 </div>
                 <Link to='/reservedSeats' state={infoSeates} >
                     <div className='btnFinal' onClick={sendInfoSeats}><span>Reservar assento(s)</span></div>
