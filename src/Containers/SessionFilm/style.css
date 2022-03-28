@@ -2,7 +2,7 @@
    
     display: flex;
     flex-wrap: wrap;
-    margin:169px 24px 0;
+    margin:0 24px 0;
     align-items: center;
     justify-content: center;
 
@@ -52,7 +52,7 @@
 }
 .false{
     background:#FBE192;
-    pointer-events:none;
+    /* pointer-events:none; */
 }
 .green{
     background:#8DD7CF;
@@ -95,4 +95,24 @@
     letter-spacing: 0.04em;
 
     color: #FFFFFF;
+}
+.containerSeats{
+    height: 110px;
+    margin: 67px auto 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    letter-spacing: 0.04em;
+    color: #293845;
+}
+.containerAll{
+    margin-bottom: 137px;
 }

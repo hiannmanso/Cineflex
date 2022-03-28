@@ -9,7 +9,6 @@ import ReservedSeats from './ReservedSeats'
 export default function App(){
     return(
         <BrowserRouter>
-            <Header/>
             <Routes>
                 <Route path='/' element={<FilmCards/>}/>
                 <Route path='/film/:id' element={<FilmScreen/>}/>

@@ -1,10 +1,9 @@
 .cardsFilm{
-    margin: 169px 25px 0 30px;
+    margin: 0 25px 0 30px;
     display: flex;
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
-    
 }
 
 .cardFilm{
@@ -13,38 +12,34 @@
     border-radius: 3px;
     width: 145px;
     height: 209px;
-    display:flex;
+    /* display:flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     margin-right: 30px;
     margin-bottom: 11px;
 }
 .cardFilm img{
     width: 129px;
     height: 193px;
-    
 }
-.containerSelect{
-    width: 100vw;
+.selectFilm{
     height: 110px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 67px;
-    z-index: -1;
-    
-
+    margin: 67px auto 0;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 28px;
+
     display: flex;
     align-items: center;
     text-align: center;
+
     letter-spacing: 0.04em;
-
     color: #293845;
-
+  
+}
+.containerCardsScreen{
+    display: flex;
+    flex-direction: column;
 }

@@ -44,3 +44,10 @@
     color: #293845;
 
 }
+ion-icon{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    font-size: 25px;
+}

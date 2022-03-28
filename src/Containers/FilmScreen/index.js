@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams, Link } from 'react-router-dom'
 import Footer from './../Footer'
+import Header from '../Header'
 
 export default function FilmScreen() {
     const [infoFilm, setInfoFilm] = useState([])
@@ -22,7 +23,8 @@ export default function FilmScreen() {
     }, [])
     return (
         <>
-            <div className='containerSelect'>
+          <Header back='/'/>
+            <div className='selectHr'>
                 <h1>Selecione o horário</h1>
             </div>
             <div className='film'>
@@ -34,7 +36,7 @@ export default function FilmScreen() {
                             <div className='filmHours'>
                                 {item.showtimes.map((times,index)=>{
                                     return(
-                                        <Link  key={index} to={`/session/${times.id}`}>
+                                        <Link  key={index} to={`/session/${times.id}`} state={`/film/${id}`}>
                                              <button className='btnHr' key={times.id}><span className='textBtn'>{times.name}</span></button>
                                         </Link>
 
